@@ -1,8 +1,8 @@
 .button {
   color: green;
   font-size: 20px;
-  backface-visibility: visible;
   border-radius: 10px;
+  min-width: 150px;
 }
 
 .dice {
@@ -10,6 +10,6 @@
   font-family: Verdana, sans-serif;
 }
 
-body > div {
-  margin: 20px 10px 20px 25px;
+body > div > div {
+  margin: 30px 20px 20px 10px;
 }
