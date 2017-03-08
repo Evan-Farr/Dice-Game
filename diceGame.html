@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dice Game</title>
+  <title>Yips!</title>
+
+  <link href="assets/css/diceGame.css" rel="stylesheet">
 </head>
 <body>
-  <script src='scripts/diceGame.js'></script>
+  <h2 id="status" style="clear: left;"></h2>
+
+  <div class="Driver">
+    <div id="dieDriver" class="dice">0</div>
+    <button onclick='hitDriver()' class="button">Hit <strong>Driver</strong></button>
+  </div>
+
+  <div class="Hybrid">
+    <div id="dieHybrid" class="dice">0</div>
+    <button onclick="hitHybrid()" class="button">Hit <strong>Hybrid</strong></button>
+  </div>
+
+  <div class="FourIron">
+    <div id="dieFourIron" class="dice">0</div>
+    <button onclick="hitFourIron()" class="button">Hit <strong>4 Iron</strong></button>
+  </div>
+
+  <div class="SevenIron">
+    <div id="dieSevenIron" class="dice">0</div>
+    <button onclick="hitSevenIron()" class="button">Hit <strong>7 Iron</strong></button>
+  </div>
+
+  <div class="Wedge">
+    <div id="dieWedge" class="dice">0</div>
+    <button onclick="hitWedge()" class="button">Hit <strong>Wedge</strong></button>
+  </div>
+
+  <div class="Putter">
+    <div id="diePutter" class="dice">0</div>
+    <button onclick="hitPutter()" class="button">Hit <strong>Putter</strong></button>
+  </div>
+
+  <script type="text/javascript" src='assets/js/diceGame.js'></script>
 </body>
 </html>
