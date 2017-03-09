@@ -1,12 +1,8 @@
 "use strict";
 
-function storePlayerProgress() {
-  var player
-
-  playRound();
-}
-
-function playRound() {
+function playHoleOne(yardsRemainingToHole) {
+  var holeLength = 432;
+  
 }
 
 function hitBall(event, max, min) {
@@ -18,10 +14,18 @@ function hitBall(event, max, min) {
 }
 
 function updateTotalYardsHit(yardsHit) {
-  var linkToTotal = document.getElementById("yardage");
+  var linkToTotal = document.getElementById("totalYardsHit");
   var currentTotalYards;
   var newTotalYards = (currentTotalYards + yardsHit);
-  linkToTotal.textContent = (currentTotalYards + yardsHit);
+  linkToTotal.textContent = newTotalYards;
+  return newTotalYards;
 }
 
-storePlayerProgress();
+function updateTotalYardsRemaining(newTotalYards, holeLength) {
+var linkToTotalRemaining = document.getElementById("yardsRemainingToHole");
+var yardsToHole = (holeLength - newTotalYards);
+linkToTotalRemaining.textContent = yardsToHole;
+return yardsToHole;
+}
+
+playHoleOne();
