@@ -1,8 +1,11 @@
 "use strict";
 
-function playHoleOne(yardsRemainingToHole) {
-  var holeLength = 432;
-  
+function playHoleOne(yardsRemaining) {
+  if (yardsRemaining !== 0) {
+    hitBall();
+  }else if (yardsRemaining === 0) {
+    alert("Ball in Hole! Game over");
+  }
 }
 
 function hitBall(event, max, min) {
@@ -15,7 +18,7 @@ function hitBall(event, max, min) {
 
 function updateTotalYardsHit(yardsHit) {
   var linkToTotal = document.getElementById("totalYardsHit");
-  var currentTotalYards;
+  var currentTotalYards = (yardsHit + parseInt(linkToTotal));
   var newTotalYards = (currentTotalYards + yardsHit);
   linkToTotal.textContent = newTotalYards;
   return newTotalYards;
@@ -23,9 +26,10 @@ function updateTotalYardsHit(yardsHit) {
 
 function updateTotalYardsRemaining(newTotalYards, holeLength) {
 var linkToTotalRemaining = document.getElementById("yardsRemainingToHole");
-var yardsToHole = (holeLength - newTotalYards);
-linkToTotalRemaining.textContent = yardsToHole;
-return yardsToHole;
+var holeLength = 432;
+var yardsRemaining = (holeLength - newTotalYards);
+linkToTotalRemaining.textContent = yardsRemaining;
+return yardsRemaining;
 }
 
-playHoleOne();
+hitBall();
