@@ -35,7 +35,7 @@ function playHole(goal) {
   return strokes;
 }
 
-function chooseClub(){
+function chooseClub() {
   var club = prompt("Which club would you like to use?");
   switch (club.toLowerCase()) {
     case "driver":
