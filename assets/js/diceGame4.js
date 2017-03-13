@@ -65,5 +65,3 @@ function swing(club) {
   var yardsHit = (Math.floor(Math.random() * club) + 1) * multiplier;
   return yardsHit;
 }
-
-playGame();
