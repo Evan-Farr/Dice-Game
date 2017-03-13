@@ -2,9 +2,11 @@
 
 function playGame() {
   var holesArray = [200, 256, 115, 234, 90, 150, 201, 315, 195];
+  var roundStrokes = [];
   for (var i = 0; i < holesArray.length; i++) {
-    playHole(holesArray[i]);
+    roundStrokes[i] = playHole(holesArray[i]);
   }
+  console.log(roundStrokes);
   alert("You finished the Round of 9! How many strokes can you take off that on your next Round of 9? Refresh the page to try again.")
 }
 
@@ -30,8 +32,8 @@ function playHole(goal) {
 
     strokes++;
   }
-
   alert("You finished this hole in " + strokes + " strokes! On to the next hole.");
+  return strokes;
 }
 
 function chooseClub(){
