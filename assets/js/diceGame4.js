@@ -25,7 +25,6 @@ function playHole(goal) {
 
     if (totalYardsHit > goal) {
       alert("Yips! Too much power! The ball must land exactly in the hole. Try again.");
-      swing();
       totalYardsHit = totalYardsHit - yardsHit;
       yardsRemaining = yardsRemaining + yardsHit;
     }
