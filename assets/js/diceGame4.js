@@ -35,6 +35,16 @@ function playHole(goal) {
   return strokes;
 }
 
+function swing() {
+  var club = chooseClub();
+  var multiplier = 10;
+  if (club === 10) {
+    multiplier = 1;
+  }
+  var yardsHit = (Math.floor(Math.random() * club) + 1) * multiplier;
+  return yardsHit;
+}
+
 function chooseClub() {
   var club = prompt("Which club would you like to use?");
   switch (club.toLowerCase()) {
@@ -54,14 +64,4 @@ function chooseClub() {
       alert("Yips! You did not enter a valid club type. Please try again.");
       return chooseClub();
   }
-}
-
-function swing(club) {
-  var club = chooseClub();
-  var multiplier = 10;
-  if (club === 10) {
-    multiplier = 1;
-  }
-  var yardsHit = (Math.floor(Math.random() * club) + 1) * multiplier;
-  return yardsHit;
 }
